@@ -38,12 +38,20 @@ public:
 	bool Init(HINSTANCE hInst); 
 	int Run();
 
+public:
+	Resolution GetResolution()
+	{
+		return mRS;
+	}
+
 private : 
 	void Logic();
 	void Input(float DeltaTime);
 	void Update(float DeltaTime);
 	void Collision(float DeltaTime);
 	void Render( );
+
+
 	
 
 private:

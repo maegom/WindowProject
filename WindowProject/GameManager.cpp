@@ -186,25 +186,7 @@ LRESULT CGameManager::WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lPa
 
         // TODO: 여기에 hdc를 사용하는 그리기 코드를 추가합니다...
 
-        //화면 출력 //lstrlen() : 문자열의 길이
-        TextOut(hdc, 100, 100, TEXT("Output"), lstrlen(TEXT("Output")));
-        TextOut(hdc, 100, 200, TEXT("Output"), lstrlen(TEXT("Output")));
-
-        //사각형 그리기. 
-        Rectangle(hdc, 200, 50, 400, 300); //왼쪽위 좌표  , 오른쪽 밑 좌표
-
-        //원 그리기.
-        Ellipse(hdc, 200, 50, 400, 300); //사각형 좌표의 내접원
-
-        //MoveToEx 를 이용해서 선의 시작점을 지정한다. 
-        //LineTo를 이용해서 선의 끝점을 지정한다. 
-        //MoveToEx가 없을 경우 선의 시작점은 0,0으로 지정되어있다. 
-        MoveToEx(hdc, 300, 200, nullptr);
-        LineTo(hdc, 500, 500);
-        LineTo(hdc, 500, 600);
-        MoveToEx(hdc, 500, 300, nullptr);
-        LineTo(hdc, 500, 200);
-
+     
         EndPaint(hWnd, &ps);
     }
     break;

@@ -15,6 +15,7 @@ struct Resolution
 	int Height;
 };
 
+//Vector2D 구조체 정의 및 operator 정의
 struct Vector2D
 {
 	float	x, y;
@@ -91,7 +92,7 @@ struct Vector2D
 		y += (float)v.y;
 	}
 
-	void operator + (float f)
+	void operator += (float f)
 	{
 		x += f;
 		y += f;
@@ -139,7 +140,7 @@ struct Vector2D
 		y -= (float)v.y;
 	}
 
-	void operator - (float f)
+	void operator -= (float f)
 	{
 		x -= f;
 		y -= f;
@@ -187,7 +188,7 @@ struct Vector2D
 		y *= (float)v.y;
 	}
 
-	void operator * (float f)
+	void operator *= (float f)
 	{
 		x *= f;
 		y *= f;
@@ -235,9 +236,27 @@ struct Vector2D
 		y /= (float)v.y;
 	}
 
-	void operator / (float f)
+	void operator /= (float f)
 	{
 		x /= f;
 		y /= f;
 	}
+
+	float Length()	const
+	{
+		// sqrtf : 루트를 씌운 값을 구해준다.
+		return sqrtf(x * x + y * y);
+	}
+
+	void Normalize()
+	{
+		float	Len = Length();
+
+		if (Len != 0.f && x != 0.f)
+			x /= Len;
+
+		if (Len != 0.f && y != 0.f)
+			y /= Len;
+	}
 };
+ 

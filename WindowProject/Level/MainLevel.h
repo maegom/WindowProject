@@ -11,5 +11,7 @@ public:
 
 public:
 	virtual void Init();
+
+	
 };
 
