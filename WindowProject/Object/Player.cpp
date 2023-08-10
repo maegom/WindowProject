@@ -1,6 +1,7 @@
 #include "Player.h"
-//#include "../Level/Level.h"
 #include "Bullet.h"
+#include "../Level/LevelManager.h"
+#include "../Level/Level.h"
 
 CPlayer::CPlayer()
 {
@@ -54,12 +55,21 @@ void CPlayer::Input(float DeltaTime)
 	if (GetAsyncKeyState('D') & 0x8000)
 	{
 		MoveDir.x += 1.f;
-	}
-	class CLevel {};
+	} 
 	if (GetAsyncKeyState(VK_SPACE) & 0x8000)
 	{
-		
-	//	CreateObj<CBullet>("Bullet", Vector2D(300.f, 500.f), Vector2D(25.f, 25.f));
+		CLevel* Level = CLevelManager::GetInst()->GetLevel();
+
+		CBullet* Bullet = Level->CreateObj<CBullet>("Bullet");
+
+		Bullet->SetSize(25.f, 25.f);
+
+		Bullet->SetPos(mPos.x + mSize.x * 0.5f - Bullet->GetSize().x * 0.5f, mPos.y - Bullet->GetSize().y);
+
+		// 플레이어 총알은 위로 이동해야 되기 때문에 y값이 점점 작아져야 한다.
+		Bullet->SetDir(-1);
+		 
+
 	}
 
 	MoveDir.Normalize();

@@ -8,6 +8,15 @@ public:
 	CBullet(const CBullet& Obj);
 	virtual ~CBullet();
 
+private:
+	int	mDir;
+
+public:
+	void SetDir(int Dir)
+	{
+		mDir = Dir;
+	}
+
 public:
 	virtual void Init();
 	virtual void Input(float DeltaTime);

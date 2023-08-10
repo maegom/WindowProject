@@ -30,6 +30,12 @@ private:
 	class CLevel* mLevel;
 
 public:
+	CLevel* GetLevel()
+	{
+		return mLevel;
+	}
+
+public:
 	void Init();
 	void Input(float DeltaTime);
 	void Update(float DeltaTime);

@@ -10,7 +10,7 @@ public:
 	virtual ~CMainLevel();
 
 public:
-	virtual void Init();
+	virtual void Init(); 
 
 	
 };
