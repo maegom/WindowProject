@@ -14,5 +14,6 @@ public:
 	virtual void Update(float DeltaTime);
 	virtual void Collision(float DeltaTime);
 	virtual void Render(HDC hDC);
+	virtual void Collision(CObject* Dest);
 };
 

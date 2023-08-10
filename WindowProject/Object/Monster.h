@@ -16,6 +16,8 @@ private:
 	// 이동 방향을 선언한다.
 	// 이동 방향이 1일 경우 오른쪽 -1일 경우 왼쪽으로 움직인다.
 	int		mDir;
+	float	mAccTime;
+	int		mCount;
 
 public:
 	virtual void Init();

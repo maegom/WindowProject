@@ -54,3 +54,8 @@ void CObject::Render(HDC hDC)
 	mMoveDir.x = 0.f;
 	mMoveDir.y = 0.f;
 }
+
+void CObject::Collision(CObject* Dest)
+{
+}
+

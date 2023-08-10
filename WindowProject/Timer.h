@@ -13,6 +13,8 @@ private :
 	static float	mFPSTime;
 	static int		mTick;
 
+	
+
 public :
 	static float GetDeltaTime()
 	{

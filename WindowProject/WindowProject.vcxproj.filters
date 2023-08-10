@@ -66,6 +66,9 @@
     <ClCompile Include="Object\Bullet.cpp">
       <Filter>03.Object\02.Bullet</Filter>
     </ClCompile>
+    <ClCompile Include="Object\GuidedBullet.cpp">
+      <Filter>03.Object\02.Bullet</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameInfo.h">
@@ -102,6 +105,9 @@
       <Filter>03.Object\01.Character</Filter>
     </ClInclude>
     <ClInclude Include="Object\Bullet.h">
+      <Filter>03.Object\02.Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Object\GuidedBullet.h">
       <Filter>03.Object\02.Bullet</Filter>
     </ClInclude>
   </ItemGroup>

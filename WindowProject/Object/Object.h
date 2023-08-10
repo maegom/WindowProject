@@ -17,8 +17,13 @@ protected:
 	Vector2D	mMoveDir;
 	float		mMoveSpeed;
 	bool		mActive; //살아있나 죽어있나 판단,  true = 살아있다. 
+	size_t		mTypeID;
 
 public:
+	size_t GetTypeID()	const
+	{
+		return mTypeID;
+	}
 	bool GetActive()	const
 	{
 		return mActive;
@@ -94,5 +99,6 @@ public:
 	virtual void Update(float DeltaTime);
 	virtual void Collision(float DeltaTime);
 	virtual void Render(HDC hDC);
+	virtual void Collision(CObject* Dest);
 };
 

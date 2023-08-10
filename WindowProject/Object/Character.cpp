@@ -37,3 +37,8 @@ void CCharacter::Render(HDC hDC)
 {
 	CObject::Render(hDC);
 }
+
+void CCharacter::Collision(CObject* Dest)
+{
+}
+

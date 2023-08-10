@@ -1,8 +1,10 @@
 #pragma once
 
-#include <windows.h>
+#include <Windows.h>
 #include <string>
 #include <list>
+#include <math.h>
+#include <typeinfo>
 
 //삭제 초기화 
 #define SAFE_DELETE(p)	if(p)	{delete p; p = nullptr;}

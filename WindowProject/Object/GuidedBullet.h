@@ -1,22 +1,20 @@
 #pragma once
-
 #include "Object.h"
-
-class CBullet :
+class CGuidedBullet :
 	public CObject
 {
 public:
-	CBullet();
-	CBullet(const CBullet& Obj);
-	virtual ~CBullet();
+	CGuidedBullet();
+	CGuidedBullet(const CGuidedBullet& Obj);
+	virtual ~CGuidedBullet();
 
 private:
-	int	mDir;
+	Vector2D	mGuidedDir;
 
 public:
-	void SetDir(int Dir)
+	void SetGuidedDir(const Vector2D& Dir)
 	{
-		mDir = Dir;
+		mGuidedDir = Dir;
 	}
 
 public:
